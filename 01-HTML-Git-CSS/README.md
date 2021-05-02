@@ -19,7 +19,7 @@
 
 ## CSS
 
-1.	Removed the header and footer classes after added emantic elements. 
+1.	Removed the header and footer classes after implementing semantic elements. 
 
 2.	Removed repeated classes/rules that fell under simpler scopes and could be condensed:
 
@@ -37,4 +37,4 @@
 
 4.	Created a section at the top for fonts specifically. 
 
-5.  Changed the footer h2 scope to footer h4
+5.  Changed the footer h2 scope to footer h4.
