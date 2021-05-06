@@ -1,0 +1,237 @@
+:root {
+  --header-text-color: #cfd4d1;
+  --header-background: #646769;
+  --hero-banner: #537284;
+
+  --hero-font: font-family: 'Allura', cursive;
+}
+
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  /* border: solid 1px red; */
+}
+
+body {
+  background-color: #cfd4d1;
+  display: flex;
+  flex-wrap: wrap;
+  /* font-family: Helvetica, Arial, sans-serif; */
+}
+
+p {
+  font-size: 2vmax;
+}
+
+/* START */
+/* HEADER SECTION */
+header {
+  background-color: #646769;
+  width: 100%;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h1 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0 1vw;
+  font-size: 5vmax;
+  text-shadow: 0 0 10px #00000080;
+  background: rgba(0, 0, 0, 0.05);
+}
+header a{
+  display: block;
+  text-decoration: none;
+  color: #d3cf8f;
+}
+.navbar {
+  /*TEST*/
+  width: auto;
+  padding: 1vmax 1.5vmax;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+header nav {
+  margin: 7px 0;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li a {
+  padding: 3vw 15px;
+  padding: 1vmax 1.5vw;
+  font-weight: lighter;
+  font-size: 1.9vmax;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+header nav ul li a:hover {
+  color: #cfd4d1;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+/* HEADER SECTION */
+/* END */
+
+/* START */
+/* HERO SECTION */
+.hero {
+  background-color: #537284;
+  color:rgba(0, 0, 0, 0.3);
+  height: 15vmax;
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.subtitle {
+  display: flex;
+  width: 25%;
+  font-size: 2.5vmax;
+  margin-bottom: 2vmax;
+  background: rgba(0, 0, 0, 0.15);
+}
+.subtitle h2 {
+  padding: 0.5vw 3vw;
+  font-family: 'Allura', cursive;
+}
+/* HERO SECTION */
+/* END */
+
+
+/* CONTENT SECTION */
+.content {
+  /* height: 15vmax; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px red;
+}
+
+.content .container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  border: solid 1px blue;
+  margin: 1.5vmax;
+}
+
+.content .first {
+  display: flex;
+  height: auto;
+  width: 20%;
+  border-right: solid .3vmax greenyellow;
+  font-size: 3vmax;
+  justify-content: flex-end;
+  padding: 0 1vmax;
+}
+
+.first span {
+  display: block;
+  width: 50%;
+  text-align: right;
+}
+
+.content .last{
+  width: 80%;
+  padding: 0 2.5vmax;
+  /* background-color: rgba(137, 43, 226, 0.192); */
+}
+
+/* FOOTER SECTION */
+footer {
+
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  header {
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align:center;
+  }
+
+  header h1 a {
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  header nav ul li a {
+    padding: 1vmax 4vw;
+  }
+
+  .subtitle {
+    font-size: 2vmax;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
+  .subtitle h2 {
+    font-family: 'Allura', cursive;
+  }
+
+  .hero {
+    background-color: #537284;
+    color:rgba(0, 0, 0, 0.3);
+    height: 7.5vmax;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .content .first {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 1.5vmax 3vmax;
+    border-right: none;
+    border-bottom: solid .3vmax greenyellow;
+  }
+
+  .content .first span {
+    display: block;
+    width: auto;
+    text-align: left; 
+    /* border-bottom: solid .3vmax greenyellow;
+    border-right: solid .3vmax greenyellow; */
+    padding-right: .6vmax;
+  }
+  
+  .content .last{
+    width: 100%;  }
+}
