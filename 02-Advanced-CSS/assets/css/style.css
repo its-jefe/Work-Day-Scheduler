@@ -298,22 +298,30 @@ footer {
 
 }
 
+.social1 {
+  align-self: center;
+}
+.social2 {
+  align-self: center;
+}
 .social3{
+  align-self: center;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/29/GitHub_logo_2013.svg');
-  content: "";
-  display:block;
-  width: 10rem;
-  height: auto;
+  /* content: " "; */
+  /* display:block; */
+  width: 100px;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .social4{
+  align-self: center;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg');
-  content: "";
-  display:block;
-  width: 10rem;
-  height: auto;
+  /* content: " "; */
+  /* display:block; */
+  width: 100px;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -379,7 +387,22 @@ footer {
     width: auto;
     padding-right: 5rem;
   }
-
+  .social1 {
+    width: 50%;
+    text-align: center;
+  }
+  .social2 {
+    width: 50%;
+    text-align: center;
+  }
+  .social3{
+    margin: 1rem auto;
+    margin-bottom: 0rem; 
+  }
+  .social4{
+    margin: 1rem auto;
+    margin-bottom: 0rem;
+  }
 }
 
 @media screen and (max-width: 634px) {
