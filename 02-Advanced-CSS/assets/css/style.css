@@ -168,7 +168,7 @@ header h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
+  padding: 1rem 7rem;
 }
 .hero .image {
   display: flex;
@@ -422,6 +422,9 @@ footer {
   }
   .navbar li {
     margin: .5rem;
+  }
+  .hero .banner {
+      padding: 1rem 2rem;
   }
 }
 
