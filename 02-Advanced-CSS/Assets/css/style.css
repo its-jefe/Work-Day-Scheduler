@@ -92,6 +92,9 @@ ul {
            /* 1.295px 0px 3.885px 1.295px */
   border: outset 2px rgba(0, 0, 0, 0.103);
 }
+.under_construction {
+  text-align: center;
+}
 /* GENERAL */
 /***END***/ 
 
@@ -277,6 +280,15 @@ header h1{
   background-clip: content-box;
   text-align: center;
 }
+.content .tail div{
+  flex-basis: 100%;
+}
+.content .tail{
+  width: 100%;
+}
+.content .tail div:nth-last-of-type(2) {
+  margin-bottom: 2.5vmax;
+}
 /* CONTENT SECTION */
 /***END***/ 
 
@@ -313,9 +325,8 @@ footer {
   .navbar {
     justify-content: center;
     width: 100%;
-    top: initial;
+    top: 4rem;
     right: initial;
-    bottom: 0;
   }
   header {
     justify-content: center;
@@ -337,10 +348,6 @@ footer {
   .content {
   width: 90%;
   }
-}
-
-@media screen and (max-width: 860px) {
-
 }
 
 @media screen and (max-width: 768px) {
@@ -372,15 +379,7 @@ footer {
     width: auto;
     padding-right: 5rem;
   }
-  .content .tail div{
-    flex-basis: 100%;
-  }
-  .content .tail{
-    width: 100%;
-  }
-  .content .tail div:nth-last-of-type(2) {
-    margin-bottom: 2.5vmax;
-  }
+
 }
 
 @media screen and (max-width: 634px) {
