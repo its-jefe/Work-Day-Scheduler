@@ -11,11 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Allura&family=Open+Sans&family=Open+Sans+Condensed:wght@300&display=swap"
     rel="stylesheet">
-
   <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
   <title>Portfolio</title>
 </head>
 
@@ -30,17 +27,27 @@
     <div class="navbar">
       <nav>
         <ul>
-          <li>
-            <a href="#about-me">About Me</a>
+          <li class="left">
+            <a href="#about-me">
+              <h3>About Me</h3>
+            </a>
           </li>
-          <li>
-            <a href="#work">Work</a>
+          <li class="left">
+            <a href="#work">
+              <h3>Work</h3>
+            </a>
           </li>
-          <li>
-            <a href="#contact-me">Contact Me</a>
+        </ul>
+        <ul>
+          <li class="right">
+            <a href="#contact-me">
+              <h3>Contact Me</h3>
+            </a>
           </li>
-          <li>
-            <a href="#resume">Resume</a>
+          <li class="right">
+            <a href="https://www.linkedin.com/in/jeff-timson/" target="_blank">
+              <h3>LinkedIn</h3>
+            </a>
           </li>
         </ul>
       </nav>
@@ -49,6 +56,9 @@
 
   <section class="hero">
     <div class="banner">
+      <div class="image" alt="looks like a goober">
+        <img src="./assets/images/selfie.jpg">
+      </div>      
       <h2>Portfolio</h2>
     </div>
   </section>
@@ -58,12 +68,17 @@
     <div class="container" id="about-me">
       <div class="head">
         <div class="banner">
-          <span>About Me</span></div>
+          <span>
+            <h4>About Me</h4>
+          </span>
         </div>
+      </div>
       <div class="tail">
         <p>My name is Jeff</p>
         <p>...</p>
         <p>I have no projects</p>
+        <p>...</p>
+        <p class="under_construction"></p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ambox_warning_blue_construction.svg" width="80px">UNDER CONSTRUCTION</p>
       </div>
     </div>
 
@@ -71,40 +86,46 @@
     <div class="container" id="work">
       <div class="head">
         <div class="banner">
-        <span>Work</span></div>
+          <span>
+            <h4>Work</h4>
+          </span>
         </div>
+      </div>
       <div class="tail">
-        <div style="background-image: url(https://picsum.photos/2000/601)">
+        <a class="projects" href="./project1.html" style="background-image: url(https://picsum.photos/2000/601)">
           <h3>Project 1</h3>
-        </div>
-        <div style="background-image: url(https://picsum.photos/1000/600)">
+        </a>
+        <a class="projects" href="./project2.html" style="background-image: url(https://picsum.photos/1000/600)">
           <h3>Project 2</h3>
-        </div>
-        <div style="background-image: url(https://picsum.photos/1000/599)">
+        </a>
+        <a class="projects" href="./project3.html" style="background-image: url(https://picsum.photos/1000/599)">
           <h3>Project 3</h3>
-        </div>
-        <div style="background-image: url(https://picsum.photos/1000/598)">
+        </a>
+        <a class="projects" href="./project4.html" style="background-image: url(https://picsum.photos/1000/598)">
           <h3>Project 4</h3>
-        </div>
-        <div style="background-image: url(https://picsum.photos/1000/597)">
+        </a>
+        <a class="projects" href="./project5.html" style="background-image: url(https://picsum.photos/1000/597)">
           <h3>Project 5</h3>
-        </div>
+        </a>
       </div>
     </div>
 
     <div class="container" id="contact-me">
       <div class="head">
         <div class="banner">
-        <span>Contact Me</span></div>
+          <span>
+            <h4>Contact Me</h4>
+          </span>
         </div>
+      </div>
+
       <div class="tail">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ad neque nobis, asperiores placeat fugit
-          beatae recusandae! Eum voluptates nulla, necessitatibus, iusto itaque quas ratione, accusantium perferendis
-          sint illum ipsum.</p>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum inventore quisquam aut voluptas? Blanditiis
-          sequi maxime ipsa, suscipit assumenda, ullam animi nemo, minus qui accusamus eveniet labore voluptatem iusto
-          inventore!</p>
+
+        <a class="social1">484.356.7178</a>
+        <a class="social2">Jeff.Timson@Yahoo.com</a>
+        <a class="social3" href="https://github.com/while-alivee"></a>
+        <a class="social4" href="https://open.spotify.com/user/1222192242?si=fce9cc8f76264f7b"></a>
+        
       </div>
     </div>
 
@@ -114,5 +135,11 @@
   <footer></footer>
 
 </body>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  }, false);
+</script>
 
 </html>
