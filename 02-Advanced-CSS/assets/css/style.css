@@ -235,7 +235,8 @@ header h1{
   flex-wrap: wrap;
   padding-top: .25vmax;
   padding-right: .5vmax;
-  height: fit-content
+  height: fit-content;
+  width: min-content;
 }
 .content .head .banner span h4 {
   width: 100%;
@@ -382,9 +383,10 @@ footer {
     margin: 0;
     padding: 0;
   }
-  .content .head span {
+  
+  .content .head .banner span {
     width: auto;
-    padding-right: 5rem;
+    padding-right: 0;
   }
   .social1 {
     width: 50%;
