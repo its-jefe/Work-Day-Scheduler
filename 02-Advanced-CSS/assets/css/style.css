@@ -403,7 +403,7 @@ footer {
   }
 }
 
-/* MAKE THE NAVBAR SPLIT, RUN VERTICALLY, AND SPREAD TO THE SIDES */
+/* MAKE THE NAVBAR RUN VERTICALLY, AND SPREAD TO THE SIDE(S) */
 @media screen and (max-width: 650px) {
   header h1 {
     font-size: 3rem;
