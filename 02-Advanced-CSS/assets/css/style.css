@@ -134,6 +134,7 @@ header h1{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),   rgba(0, 0, 0, 0.25));
   /* background-image: linear-gradient(rgb(61, 61, 61),   rgb(97, 97, 97)); */
   /* CONSIDER MAKING THIS THING SOLID */
+
   box-shadow: 0vmax .1vmax .3vmax .2vmax rgba(0, 0, 0, 0.363);
   border: outset 2px rgba(0, 0, 0, 0.103);
 }
@@ -205,7 +206,6 @@ header h1{
 /***START***/
 /* CONTENT SECTION */
 .content {
-  /* justify-self: center; */
   width: 80%;
   display: flex;
   flex-wrap: wrap;
@@ -224,7 +224,6 @@ header h1{
   box-sizing: content-box;
 }
 .content .head .banner {
-  /* box-sizing: min-content; */
   display: flex;
   margin-right: .25rem;
   justify-content: flex-end;
@@ -309,8 +308,6 @@ footer {
 .social3{
   align-self: center;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/29/GitHub_logo_2013.svg');
-  /* content: " "; */
-  /* display:block; */
   width: 100px;
   height: 30px;
   background-size: contain;
@@ -319,8 +316,6 @@ footer {
 .social4{
   align-self: center;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg');
-  /* content: " "; */
-  /* display:block; */
   width: 100px;
   height: 30px;
   background-size: contain;
@@ -329,7 +324,7 @@ footer {
 /* FOOTER SECTION */
 /***END***/ 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1050px) {
   .navbar {
     justify-content: center;
     width: 100%;
@@ -351,6 +346,9 @@ footer {
     width: 50%;
     justify-content: space-around;
   }
+  .hero .banner {
+    padding-top: 2rem;
+  }
 }
 @media screen and (max-width: 920px) {
   .content {
@@ -368,7 +366,6 @@ footer {
   }
   .hero .banner{
     margin-top: 0;
-    padding-top: 2vmax;
   }
   .content .container {
     flex-wrap: wrap;
@@ -406,6 +403,7 @@ footer {
   }
 }
 
+/* MAKE THE NAVBAR SPLIT, RUN VERTICALLY, AND SPREAD TO THE SIDES */
 @media screen and (max-width: 650px) {
   header h1 {
     font-size: 3rem;
