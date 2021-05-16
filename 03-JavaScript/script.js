@@ -1,10 +1,5 @@
 const numb = 4; //the number of criteria
 
-// 32 - 126
-// for (i = 32; i <= 126; i++) {
-//   console.log(i + " " + String.fromCharCode(i))
-// }
-
 // what they sound like
 function gen_lowercase() {
   console.log("into gen_lowercase")
