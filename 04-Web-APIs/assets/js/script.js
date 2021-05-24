@@ -183,13 +183,14 @@ function scoreboard_Func() { //clunky
 
     var prompt_El = document.createElement("div");
     prompt_El.textContent = "Enter your initials";
-    prompt_El.className = "initials-prompt"
+    prompt_El.className = "initials-prompt";
     scoreboardEl.appendChild(prompt_El);
 
     var initialsEntryBox_El = document.createElement("input"); // initial entry box (CREATE & APPEND)
     initialsEntryBox_El.type = "text";
     initialsEntryBox_El.className = "inital-entry";
     initialsEntryBox_El.maxLength = "3";
+    initialsEntryBox_El.placeholder = "here";
 
     scoreboardEl.appendChild(initialsEntryBox_El);
 
@@ -200,6 +201,7 @@ function scoreboard_Func() { //clunky
         localStorage.setItem((initialsEntryBox_El.value).toUpperCase(), total_R_El.textContent)
         initialsEntryBox_El.remove();
         submitBtn_El.remove();
+        prompt_El.remove();
         scoreboardEl.appendChild(returnBtn_El); // allow return only after initals are submitted
     }
     scoreboardEl.appendChild(submitBtn_El);
