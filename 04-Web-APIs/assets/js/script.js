@@ -181,18 +181,24 @@ function scoreboard_Func() { //clunky
     container_El.className = "container";
     scoreboardEl.appendChild(container_El);
 
-    var initialEntryBox_El = document.createElement("input"); // initial entry box (CREATE & APPEND)
-    initialEntryBox_El.type = "text";
-    initialEntryBox_El.className = "inital-entry";
-    initialEntryBox_El.maxLength = "3";
-    scoreboardEl.appendChild(initialEntryBox_El);
+    var prompt_El = document.createElement("div");
+    prompt_El.textContent = "Enter your initials";
+    prompt_El.className = "initials-prompt"
+    scoreboardEl.appendChild(prompt_El);
+
+    var initialsEntryBox_El = document.createElement("input"); // initial entry box (CREATE & APPEND)
+    initialsEntryBox_El.type = "text";
+    initialsEntryBox_El.className = "inital-entry";
+    initialsEntryBox_El.maxLength = "3";
+
+    scoreboardEl.appendChild(initialsEntryBox_El);
 
     var submitBtn_El = document.createElement("button"); // submit button (CREATE & APPEND)
     submitBtn_El.className = "submit";
     submitBtn_El.textContent = "SUBMIT";
     submitBtn_El.onclick = function(){
-        localStorage.setItem((initialEntryBox_El.value).toUpperCase(), total_R_El.textContent)
-        initialEntryBox_El.remove();
+        localStorage.setItem((initialsEntryBox_El.value).toUpperCase(), total_R_El.textContent)
+        initialsEntryBox_El.remove();
         submitBtn_El.remove();
         scoreboardEl.appendChild(returnBtn_El); // allow return only after initals are submitted
     }
