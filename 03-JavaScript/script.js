@@ -35,7 +35,7 @@ function gen_special() {
   else if (option >= 24 && option <= 29) {
     // CharCode 91 - 96 (6 total)    [\]^_`
     return (String.fromCharCode(91 + Math.floor(Math.random() * 6)));
-  } else { //(option >= 30 && option <= 33)
+  } else { // (option >= 30 && option <= 33)
     // CharCode 123 - 126 (4 total)  {|}~ 
     return (String.fromCharCode(123 + Math.floor(Math.random() * 4)));
   }
@@ -44,7 +44,7 @@ function gen_special() {
 // checks the status of the checkboxes
 // will not allow all boxes to be unchecked
 function check_checkbox() {
-  if (this.checked) {// if checkbox is checked
+  if (this.checked) {// if checked
     checked += 1;
     console.log(this.id + " is checked (is " + this.checked + ")");
   } else {// else is unchecked
@@ -63,9 +63,9 @@ function generatePassword() {
 
   var ret = ""; // return string 
   var option; // switch statement option
-  var gen_criteria = [] // reset array of checked criteria
 
-  for (var i = 0; i < criteria.length; i++) {// determine checked criteria
+  var gen_criteria = [] // reset array of checked criteria ()
+  for (var i = 0; i < criteria.length; i++) {// determine checked criteria .. store in gen_criteria array
     if (criteria[i].checked == true) {
       gen_criteria.push(criteria[i])
     }
@@ -73,12 +73,9 @@ function generatePassword() {
 
   for (var i = 0; i < length.value; i++) { //for specified length
     option = Math.floor(Math.random() * gen_criteria.length) //0-3 depending on gen_criteria.length
-    console.log("selected " + gen_criteria[option].id + " @ index " + option)
 
     //set option to the index of random selection of criteria.checked
     option = gen_criteria[option].id
-    console.log(typeof(option))
-    console.log(typeof(option) + " " + option)
 
     switch (option) {
       case "lowercase": ret += gen_lowercase();
@@ -114,7 +111,7 @@ var length = document.getElementById("length");
 length.value = 12;
 length.min = "8";
 length.max = "128";
-// adjust values
+// adjust value
 length.addEventListener("change", function () {
   //stays within constraints on manual entry by...
   if (this.value < 8) {
@@ -132,7 +129,6 @@ length.addEventListener("change", function () {
 })
 
 // create available criteria
-//should have made these objects with their own generate functions 
 lowercase = document.getElementById("lowercase")
 uppercase = document.getElementById("uppercase")
 numeric = document.getElementById("numeric")
@@ -142,13 +138,11 @@ special = document.getElementById("special")
 criteria = [
   lowercase, uppercase, numeric, special
 ]
-// set defaults .. adding "index" to each of the criteria 
+// set defaults
 for (i = 0; i < numb; i++) {
   criteria[i].checked = "true";
 }
-// Is index even necessary?
 
-// array?? NOT ARRAY of only the criteria that are checked
 checked = 4
 
 lowercase.addEventListener("change", check_checkbox);
