@@ -203,7 +203,6 @@ function scoreboard_Func() { //clunky
     returnBtn_El.textContent = "RETURN";
     returnBtn_El.onclick = function(){
         // clear the board + scores
-
         headingEl.remove()
         container_El.remove()
         returnBtn_El.remove();
@@ -213,7 +212,7 @@ function scoreboard_Func() { //clunky
         timeBonus = 0;
         // append start and highscores buttons
         main_El.appendChild(startBtnEl);
-        document.querySelector("footer").appendChild(highScoresBtn_El)
+        document.querySelector("footer").appendChild(highScoresBtn_El);
     };
 
     // Score Rack Left 
@@ -228,7 +227,7 @@ function scoreboard_Func() { //clunky
     rackLeftEl.appendChild(correctAnswers_L_El);
     var timeBonus_L_El = document.createElement("h4");
     timeBonus_L_El.className = "bonusL";
-    timeBonus_L_El.textContent = ("Time Bonus")
+    timeBonus_L_El.textContent = ("Time Bonus");
     rackLeftEl.appendChild(timeBonus_L_El);
     var total_L_El = document.createElement("h4");
     total_L_El.className = "totalL";
@@ -269,9 +268,9 @@ function highScores_Func(){
     grabInitials_El.className = "local-initials";
     grabScores_El.className = "local-scores";
     for (var i = 0; i < localStorage.length; i++){
-        grabInitials_El.textContent += (localStorage.key(i) + "\r\n")
-        grabScores_El.textContent += (localStorage.getItem(localStorage.key(i)) + "\r\n")
-    }
+        grabInitials_El.textContent += (localStorage.key(i) + "\r\n");
+        grabScores_El.textContent += (localStorage.getItem(localStorage.key(i)) + "\r\n");
+    };
     highScores_El.appendChild(grabInitials_El);
     highScores_El.appendChild(grabScores_El);
 
@@ -281,9 +280,9 @@ function highScores_Func(){
     returnBtn_El.onclick = function(){
         highScores_El.remove();
         main_El.appendChild(startBtnEl);
-        document.querySelector("footer").appendChild(highScoresBtn_El)
+        document.querySelector("footer").appendChild(highScoresBtn_El);
     };
-    highScores_El.appendChild(returnBtn_El)
+    highScores_El.appendChild(returnBtn_El);
 }
 
 // HTML Elements
@@ -304,7 +303,7 @@ var questionEl = document.createElement("div");
 questionEl.className = "question";
 var answersContainer_El = document.createElement("div");
 answersContainer_El.className = "answers";
-var highScoresBtn_El = document.getElementById("highscores")
+var highScoresBtn_El = document.getElementById("highscores");
 
 
 highScoresBtn_El.onclick = highScores_Func;
@@ -319,14 +318,14 @@ const questionList = [
     'Who was the 44th President of The United States?',
     'Who was in the movie Jurassic Park and now has his face on throw pillows and shower curtains?',
     'Who theorized special relativity?',
-    "Who said 'An unexamined life is not worth living?'"
+    'Who said "An unexamined life is not worth living?"'
     // BONUS : Bell peppers have more vitamin C than oranges? TRUE! 
 ];
 var questionArray = []; // list of questions
 
 const answerList = [ // 5 correct ... 23 fillers ... 28 total
     'Jesus Christ', 'Barack Obama', 'Jeff Goldblum', 'Albert Enstein', 'Socrates',
-    'Oprah Winfrey', 'Wolfgang Amadeus Mozart', 'David Bowie', 'Neil Armstrong', 'Marilyn Monroe',
+    'Oprah Winfrey', 'Mozart', 'David Bowie', 'Neil Armstrong', 'Marilyn Monroe',
     'Salvador Dali', 'Will Smith', 'Stephen Hawking', 'Steve Jobs', 'Jackie Chan',
     'Meryl Streep', 'Whitney Houston', 'Jim Morrison', 'Beyoncé', 'Cristiano Ronaldo',
     'George Washington', 'Michael Jordan', 'Leonardo DiCaprio', 'Bono', 'Abraham Lincoln',
