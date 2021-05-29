@@ -75,15 +75,6 @@ function update_tasks_func(user_select_start, user_select_end) {
         this_textarea = $(String("#" + i)).find("textarea").val()
         console.log(this_textarea)
     }
-
-    // INTRIGUED AND UNCERTAIN BY THIS CODE FROM TASKMASTER
-    // - loop over object properties
-    // $.each(tasks, function (list, arr) {
-        // - then loop over sub-array
-        // arr.forEach(function (task) {
-            // createTask(task.text, task.date, list);
-        // });
-    // });
 }
 
 // global time
