@@ -134,7 +134,6 @@ header h1{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),   rgba(0, 0, 0, 0.25));
   /* background-image: linear-gradient(rgb(61, 61, 61),   rgb(97, 97, 97)); */
   /* CONSIDER MAKING THIS THING SOLID */
-
   box-shadow: 0vmax .1vmax .3vmax .2vmax rgba(0, 0, 0, 0.363);
   border: outset 2px rgba(0, 0, 0, 0.103);
 }
@@ -191,13 +190,26 @@ header h1{
 }
 .hero h2 { 
   justify-self: center;
-  width: 50%;
+  width: fit-content;
   text-align: right;
   height: fit-content;
   top: 0;
   right: 0;
   text-shadow: 0 0 2px black;
   padding: 0.5vw 3vw;
+}
+#date_El{
+  width: max-content;
+  font-family: initial;
+  display: block;
+  padding: 1rem 0 ;
+  font-size: larger;
+  white-space: pre-line;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: bold;
+  color: rgb(146, 221, 255);
+  text-shadow: 0 0 3px black;
 }
 /* HERO SECTION */
 /***END***/ 
@@ -228,6 +240,7 @@ header h1{
   margin-right: .25rem;
   justify-content: flex-end;
   align-content: center;
+  position: relative;
 }
 .content .head .banner span {
   display: flex;
@@ -236,12 +249,14 @@ header h1{
   padding-right: .5vmax;
   height: fit-content;
   width: min-content;
+  position: sticky;
 }
 .content .head .banner span h4 {
-  width: 100%;
-  text-align: right;
-  flex-wrap: wrap;
-  height: fit-content;
+  /* width: 100%; */
+  /* text-align: right; */
+  /* flex-wrap: wrap; */
+  /* height: fit-content; */
+  /* position: sticky; */
 }
 .content .tail{
   display: flex;

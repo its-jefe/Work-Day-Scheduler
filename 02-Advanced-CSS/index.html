@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Add "Buy me a Coffee" text & link to ko.fi-->
+<!-- Add clock and make site change theme based on the time of day -->
+
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +12,9 @@
   <link rel="stylesheet" href=".\assets\css\style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Open+Sans&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Open+Sans&family=Open+Sans+Condensed:wght@300&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
   <title>Portfolio</title>
@@ -20,6 +26,7 @@
     <h1>
       <a href="/">Jeff Timson</a>
     </h1>
+
     <div class="navbar">
       <nav>
         <ul>
@@ -54,7 +61,9 @@
     <div class="banner">
       <div class="image" title="looks like a goober">
         <img src="./assets/images/selfie.jpg">
-      </div>      
+      </div>
+
+      <div id="date_El"></div>
       <h2>Portfolio</h2>
     </div>
   </section>
@@ -74,7 +83,9 @@
         <p>...</p>
         <p>I have no projects</p>
         <p>...</p>
-        <div class="under_construction"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ambox_warning_blue_construction.svg" width="80px"><br>UNDER CONSTRUCTION</p>
+        <div class="under_construction"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Ambox_warning_blue_construction.svg"
+            width="80px"><br>UNDER CONSTRUCTION</p>
         </div>
       </div>
     </div>
@@ -89,19 +100,24 @@
         </div>
       </div>
       <div class="tail">
-        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/2000/601)" target="_blank">
+        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/2000/601)"
+          target="_blank">
           <h3>Project 1</h3>
         </a>
-        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/600)" target="_blank">
+        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/600)"
+          target="_blank">
           <h3>Project 2</h3>
         </a>
-        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/599)" target="_blank">
+        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/599)"
+          target="_blank">
           <h3>Project 3</h3>
         </a>
-        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/598)" target="_blank">
+        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/598)"
+          target="_blank">
           <h3>Project 4</h3>
         </a>
-        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/597)" target="_blank">
+        <a class="projects" href="./coming_soon.html" style="background-image: url(https://picsum.photos/1000/597)"
+          target="_blank">
           <h3>Project 5</h3>
         </a>
       </div>
@@ -121,8 +137,8 @@
         <a class="social1">484.356.7178</a>
         <a class="social2">Jeff.Timson@Yahoo.com</a>
         <a class="social3" href="https://github.com/while-alive" target="_blank"> </a>
-        <a class="social4" href="https://open.spotify.com/user/1222192242?si=fce9cc8f76264f7b" target="_blank" > </a>
-        
+        <a class="social4" href="https://open.spotify.com/user/1222192242?si=fce9cc8f76264f7b" target="_blank"> </a>
+
       </div>
     </div>
 
@@ -134,9 +150,27 @@
 </body>
 
 <script>
-  window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-  }, false);
+  // window.addEventListener('scroll', () => {
+  //   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+  // }, false);
+
+  var date_El = document.getElementById("date_El")
+
+  setInterval(function () {
+    var date = (new Date).toString().substr(0, 16);
+    
+    var time = new Date();
+
+    if (time.getHours() <= 12){
+      time = time.toString().substr(16, 8);
+      date_El.textContent = date + "\r\n" + time;
+      date_El.textContent += " AM";
+    }else {
+      time = new Date(time - 43200000).toString().substr(16, 8);
+      date_El.textContent = date + "\r\n" + time;
+      date_El.textContent += " PM";
+    }
+  }, 1000)
 </script>
 
 </html>
