@@ -104,7 +104,7 @@ var update_time = setInterval(function () {
 // TO-DO : Would like to allow minor adjustments 
 // from user of start and end times
 var user_select_start = 9; //9am
-var user_select_end = 21 + 1; //5pm : i believe i need to add 1 to user input
+var user_select_end = 17 + 1; //5pm : i believe i need to add 1 to user input
 
 // global task object / localstorage key
 var schedule = {};
