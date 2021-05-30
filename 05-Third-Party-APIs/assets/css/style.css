@@ -79,3 +79,15 @@ textarea{
 .saveBtn:focus {
   outline: none; /* Added */
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  margin-top: 20px;
+  padding: 10px;
+}
+audio {
+  opacity: 0.5;
+  width: 80%;
+}
