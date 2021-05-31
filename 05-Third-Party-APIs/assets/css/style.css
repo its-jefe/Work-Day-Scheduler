@@ -55,8 +55,9 @@ textarea{
 }
 
 .present {
+  /* Removed background color to use color-gradient */
   background-color: #ff6961;
-  color: white;
+  color: black; /* Changed from white to black */
 }
 
 .future {

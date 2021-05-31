@@ -1,5 +1,5 @@
-// TO DO LATER .. make time blocks meters that move with the passage of time
-// how graphically intensive is this???
+// TO DO LATER .. 
+// give container a color gradient background
 
 // timeblock create
 function create_timeblock_func(user_select_start, user_select_end) {
@@ -45,17 +45,12 @@ function create_timeblock_func(user_select_start, user_select_end) {
 function update_tasks_func(user_select_start, user_select_end) {
     // pull tasks from localstorage if it is there
     schedule = JSON.parse(localStorage.getItem("schedule"));
-    var this_textarea;
     if (!schedule) { // if still null . initalize it
         schedule = {};
         for (var i = user_select_start; i < user_select_end; i++) {
             schedule[i] = "";
         };
     };
-    // update on screen tasks 
-    for (var i = user_select_start; i < user_select_end; i++) {
-        this_textarea = $(String("#" + i)).find("textarea").val();
-    }
 };
 
 function update_timeblock_func() {
@@ -80,6 +75,25 @@ function update_timeblock_func() {
             .addClass("col-10")
     };
 };
+
+function update_present_func() {
+//     var this_minute = moment().format('m');
+//     var this_hour = moment().format('H');
+//     var this_percentage = this_minute/60;
+//     this_percentage = String((this_percentage*100).toFixed(2));
+//     console.log("h: " + this_hour);
+//     console.log("m: " + this_minute);
+//     console.log(this_percentage + "%");
+
+//     // if the hour is not past
+//     if (this_hour < user_select_end){
+//         // updated hour textarea
+//         $(String("#" + this_hour)).find("textarea").css("background-image", "linear-gradient(#d3d3d3 " + (this_percentage-3) + "%, #00000000 " + (this_percentage) + "%")
+//         // previous hour text area
+//         $(String("#" + (this_hour-1))).find("textarea").css("background-image", "")
+//     }
+};
+
 // global time
 var time = 0;
 // endless interval updates every second
@@ -97,7 +111,12 @@ var update_time = setInterval(function () {
     // update the time-block colors every hour
     if (moment().format("mm:ss") == "00:00") {
         console.log("updating timeblocks");
-        update_timeblock_func(user_select_start, user_select_end)
+        update_timeblock_func(user_select_start, user_select_end);
+        update_present_func();
+    }
+    //updates the bar every 30 seconds
+    if (moment().format('s') == '0' || moment().format('s') == '30'){
+        update_present_func();
     }
 }, 1000);
 
@@ -112,6 +131,7 @@ var schedule = {};
 update_tasks_func(user_select_start, user_select_end);
 create_timeblock_func(user_select_start, user_select_end);
 update_timeblock_func(user_select_start, user_select_end);
+update_present_func();
 
 // saveBtn on click
 $(".saveBtn").on("click", function () {
