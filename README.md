@@ -1,57 +1,42 @@
 # 05 Third-Party APIs: Work Day Scheduler
 
-Deployed @ https://its-jefe.github.io/Work-Day-Scheduler/
+#### Deployed @ https://its-jefe.github.io/Work-Day-Scheduler/
+---
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+## Work Day Scheduler
+### For those strict nine-to-fiver'ers 
 
-The starter code uses the [Moment.js](https://momentjs.com/) library to work with date and time, but feel free to use a different JavaScript solution to handle this functionality since Moment.js is considered a "legacy" project. Learn more about these other solutions in the [Moment.js project status page.](https://momentjs.com/docs/#/-project-status/)  
+This is [project #5][2] for [UCF Coding Bootcamp][1]
 
-## User Story
+The front-end was designed off of a provided mock-up gif.
 
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+Handled all back-end development.
 
-## Acceptance Criteria
+### Implements: 
+- `jQuery` (`DOM` Manipulation)
+- `moment.js` (although it is no longer being maintained)
+- `soundcloud api` for Dolly Partons 9 to 5... remix (couldn't get the original)
+- `localstorage`
 
-```
-GIVEN I am using a daily planner to create a schedule
+### Usage
+Plan out your 9 to 5 work day!
 
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
+Write your tasks into a block and hit the '+' to update.
+<em>If you want to remove a task you can must also hit the plus)</em>
 
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
+<u>Color key</u>
+- Green: You have time
+- Red: The hour your currently in (better complete your task)
+- Grey: Hour is over
 
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+### Future Developments
 
-WHEN I click into a timeblock
-THEN I can enter an event
-
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./assets/05-third-party-apis-homework-demo.gif)
+- I would like to allow the user to choose their own start and end times. 
+- Could be cool to make a full calendar. 
+- Add a trash button that allows you to delete notes more intuitively (with fair warning)
+- Move away from the soundcloud api and use spotify with auth instead.
 
 
-## Review
+[1]: https://bootcamp.ce.ucf.edu/coding/
+[2]: https://github.com/UCF-Coding-Boot-Camp/UCF-VIRT-BO-FSF-PT-04-2021-U-B/tree/main/05-Third-Party-APIs/02-Challenge
 
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
-
-[1][https://github.com/UCF-Coding-Boot-Camp/UCF-VIRT-BO-FSF-PT-04-2021-U-B/tree/main/05-Third-Party-APIs/02-Challenge]
