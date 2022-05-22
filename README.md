@@ -24,6 +24,8 @@ Plan out your 9 to 5 work day!
 Write your tasks into a block and hit the '+' to update.
 <em>If you want to remove a task you can must also hit the plus)</em>
 
+❗️<i>just dont clear your localstorage</i>❗️
+
 <u>Color key</u>
 - Green: You have time
 - Red: The hour your currently in (better complete your task)
