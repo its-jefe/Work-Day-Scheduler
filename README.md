@@ -32,12 +32,11 @@ Write your tasks into a block and hit the '+' to update.
 - Grey: Hour is over
 
 ### Future Developments
-
-- I would like to allow the user to choose their own start and end times. 
+- Use the cloud instead of the fickle localstorage for the average user (although for a daily planner it's not the worst)
+- I would like to allow the user to choose their own start and end times.
 - Could be cool to make a full calendar. 
 - Add a trash button that allows you to delete notes more intuitively (with fair warning)
 - Move away from the soundcloud api and use spotify with auth instead.
-
 
 [1]: https://bootcamp.ce.ucf.edu/coding/
 [2]: https://github.com/UCF-Coding-Boot-Camp/UCF-VIRT-BO-FSF-PT-04-2021-U-B/tree/main/05-Third-Party-APIs/02-Challenge
