@@ -26,7 +26,7 @@ Write your tasks into a block and hit the '+' to update.
 
 ❗️<i>just dont clear your localstorage</i>❗️
 
-<u>Color key</u>
+<u>Color key:</u>
 - Green: You have time
 - Red: The hour your currently in (better complete your task)
 - Grey: Hour is over
@@ -34,10 +34,9 @@ Write your tasks into a block and hit the '+' to update.
 ### Future Developments
 - Use the cloud instead of the fickle localstorage for the average user (although for a daily planner it's not the worst)
 - I would like to allow the user to choose their own start and end times.
-- Could be cool to make a full calendar. 
-- Add a trash button that allows you to delete notes more intuitively (with fair warning)
+- Would be cool/fun to make a full calendar. 
+- Add a trash button that allows you to delete notes more intuitively than hitting the plus again (with confirmation)
 - Move away from the soundcloud api and use spotify with auth instead.
 
 [1]: https://bootcamp.ce.ucf.edu/coding/
 [2]: https://github.com/UCF-Coding-Boot-Camp/UCF-VIRT-BO-FSF-PT-04-2021-U-B/tree/main/05-Third-Party-APIs/02-Challenge
-
